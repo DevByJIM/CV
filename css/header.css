@@ -1,0 +1,95 @@
+header{
+    position: fixed;
+    overflow: hidden;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    justify-content: center;
+    background: #525;
+    box-shadow: 0px 0px 5px #999;
+}
+.row_nav{  
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    font-family: 'Spartan';  
+    color: #FFF;
+    margin:0px auto;
+    font-size: 16px;
+    outline: 2px solid #48e;
+}
+
+
+.myNombre{
+    font-size: 18px;   
+    padding-left: 1px;
+    padding-top: 10px;
+}
+
+.row_nav ul {
+    display: flex;
+   
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    margin: auto 0px;
+}
+
+
+.row_nav > ul > li {
+    border-right: 1px solid #CCC;
+    padding: 10px 0px;
+    transition: all 300ms;
+}
+
+.row_nav > ul > li a{
+    padding: 0px 10px 0px 10px;
+    color:#fff;
+    text-decoration: none;
+}
+
+.row_nav > ul > li:first-child{
+    border-left: 1px solid #CCC;
+} 
+
+.row_nav > ul > li:hover{
+    background: #48e;
+    box-shadow: 0px 0px 4px blue inset;
+    font-weight: 400;   
+}
+
+
+/* DESPLEGABLES */
+
+.row_nav > ul > li > ul {
+    display: none;
+    position: absolute;
+    width: auto;
+    text-decoration: none;
+    background: #66666666;
+}
+
+
+.row_nav > ul > li:hover > ul {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 10px;
+    margin-left: -10px;
+    box-shadow: 0px 2px 2px #999;
+    z-index: 1;
+}
+ 
+.row_nav > ul > li:hover > ul > li{
+    background:#F2F1F0;
+    border-bottom: 1px solid #ccc;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;    
+}
+
+.row_nav > ul > li:hover > ul > li > a{
+    color: #666;
+}
+
+.row_nav > ul > li:hover > ul > li:hover{
+    box-shadow: 0px 0px 20px #48e inset;
+} 
