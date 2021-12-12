@@ -15,16 +15,13 @@ header{
     font-family: 'Spartan';  
     color: #FFF;
     margin:0px auto;
-    font-size: 1em;
 }
 
 
 .myNombre{
-    font-size: 1.4em;   
-    padding-left: 35px;
+    font-size: 24px;   
+    padding-left: 5px;
     padding-top: 10px;
-    border-left: 1px solid #CCC;
-    border-right: 1px solid #CCC;
 }
 
 .row_nav ul {
@@ -36,9 +33,9 @@ header{
 
 
 .row_nav > ul > li {
-    border-right: 1px solid #CCC;
-    padding: 10px 10px;
+    padding: 10px 0px;
     transition: all 300ms;
+
 }
 
 .row_nav > ul > li a{
@@ -46,10 +43,6 @@ header{
     color:#fff;
     text-decoration: none;
 }
-
-/* .row_nav > ul > li:first-child{
-    border-left: 1px solid #CCC;
-}  */
 
 .row_nav > ul > li:hover{
     background: #48e;
