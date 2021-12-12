@@ -1,0 +1,26 @@
+#inicio{
+    font-family: 'Spartan';
+}
+
+#inicio .datos{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    
+}
+
+#inicio h1{
+    font-size: 2em;
+    font-weight: 700;
+}
+
+#inicio h2{
+    font-size: 2em;
+}
+#inicio .h2-normal{
+    font-size: 1.4em;
+}
+
+#inicio p{
+    margin: 0;
+}
