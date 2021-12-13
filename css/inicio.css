@@ -5,8 +5,7 @@
 #inicio .datos{
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-around;
-    
+    justify-content: space-around;  
 }
 
 #inicio .imagen{
