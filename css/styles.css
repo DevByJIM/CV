@@ -10,7 +10,7 @@
     list-style: none;
 }
 body{
-    background-image: url("/images/paper.png");
+    background-image: url("../images/paper.png");
     height: 1800px;
 }
 
