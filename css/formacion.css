@@ -5,42 +5,116 @@
 :root {
     --bar-color: #48e;
     --fill-size: -10%;
+    --transition: color 0.1s, background-color 0.2s ease-in-out;
+    --bar-length: 0%;
 }
 
-.barras{
+.h2_importante{
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.description__small{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.lenguage--bars{
     display: grid;
     grid-template-columns: 1fr 1fr;
+
 }
-.barras--bar{
-    display: flex;
-    align-items: baseline;
-    width: 80%;
+.lenguage__item{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    width: 85%;
 }
 
-.barras h5{
+.lenguage__item h5{
     margin-right: 10px;
 }
-.progress-bar{
+
+.ide__item{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.ide__item .textos{
+    display: flex;
+    justify-content: flex-start;
+    margin:0;
+    padding: 0;
+}
+
+.ide__item h5{
+    margin-right: .8em;
+    margin-bottom: 0;;
+}
+.ide__item p{
+    margin:0;
+}
+
+
+
+.progress__bar,
+.progress__bar::after{
     position: relative;
     width: 100%;
-    height: 20px;
+    height: 8px;
     background: #ccc;
-    border-radius: 2em;
+    border-radius: 1em;
     overflow: hidden;
 }
 
-.progress-bar::before{
+.progress__bar::after{
     content: '';
     position: absolute;
-    width: 100%;
-    height: 100%;
+    left:-100%;
     background-color: var(--bar-color);
-    transform: translateX(-100%);
-    animation: fill-bar 1s forwards;
+    /* transform: translateX(-100%); */
+     animation: fill-bar 2s ease-in-out forwards; 
 }
+
+.progress__bar--0::after{
+    --bar-length: 0%;
+}
+.progress__bar--10::after{
+    --bar-length: 10%;
+}
+.progress__bar--20::after{
+    --bar-length: 20%;
+}
+.progress__bar--30::after{
+    --bar-length: 30%;
+}
+.progress__bar--40::after{
+    --bar-length: 40%;
+}
+.progress__bar--50::after{
+    --bar-length: 50%;
+}
+.progress__bar--60::after{
+    --bar-length: 60%;
+}
+.progress__bar--70::after{
+    --bar-length: 70%;
+}
+.progress__bar--80::after{
+    --bar-length: 80%;
+}
+.progress__bar--90::after{
+    --bar-length: 90%;
+}
+.progress__bar--100::after{
+    --bar-length: 100%;
+}
+
 
 @keyframes fill-bar{
     to{
-        transform: translateX(var(--fill-size));
+        transform: translateX(var(--bar-length));
     }
 }
