@@ -1,3 +1,46 @@
 #formacion{
     font-family: 'Spartan';
 }
+
+:root {
+    --bar-color: #48e;
+    --fill-size: -10%;
+}
+
+.barras{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.barras--bar{
+    display: flex;
+    align-items: baseline;
+    width: 80%;
+}
+
+.barras h5{
+    margin-right: 10px;
+}
+.progress-bar{
+    position: relative;
+    width: 100%;
+    height: 20px;
+    background: #ccc;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+.progress-bar::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bar-color);
+    transform: translateX(-100%);
+    animation: fill-bar 1s forwards;
+}
+
+@keyframes fill-bar{
+    to{
+        transform: translateX(var(--fill-size));
+    }
+}
